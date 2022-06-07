@@ -8,13 +8,13 @@
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="/img/<?= $komik['sampul']; ?>" class="img-fluid rounded-start" alt="...">
+                        <img src="/img/<?= !empty($komik['sampul']) ? $komik['sampul'] : ''; ?>" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title"><?= $komik['judul']; ?></h5>
-                            <p class="card-text"><b>Penulis :</b> <?= $komik['penulis']; ?></p>
-                            <p class="card-text"><small class="text-muted"><b>Penerbit :</b> <?= $komik['penerbit']; ?></small></p>
+                            <h5 class="card-title"><?= !empty($komik['judul']) ? $komik['judul'] : ''; ?></h5>
+                            <p class="card-text"><b>Penulis :</b> <?= !empty($komik['penulis']) ? $komik['penulis'] : ''; ?></p>
+                            <p class="card-text"><small class="text-muted"><b>Penerbit :</b> <?= !empty($komik['penerbit']) ? $komik['penerbit'] : ''; ?></small></p>
 
                             <a href="" class="btn btn-warning">Edit</a>
                             <a href="" class="btn btn-danger">Delete</a>
