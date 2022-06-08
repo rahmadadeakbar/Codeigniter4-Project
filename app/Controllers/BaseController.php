@@ -50,6 +50,7 @@ class BaseController extends Controller
         // E.g.: $this->session = \Config\Services::session();
 
         // perintah ini bisa digunakan di controller manapun selama masih basecontroller
+        session();
         $this->nama = "Ade";
     }
 }
