@@ -12,7 +12,7 @@
                 </div>
             <?php endif; ?>
 
-            <table class="table">
+            <table class="table mt-3">
                 <thead>
                     <tr>
                         <th scope="col">No</th>
