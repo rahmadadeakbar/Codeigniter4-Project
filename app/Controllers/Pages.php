@@ -6,6 +6,8 @@ class Pages extends BaseController
 {
     public function index()
     {
+        // $faker = \Faker\Factory::create();
+        // dd($faker->address);
         $data = [
             'title' => 'CodeIgniter Project',
             'tes' => ['satu', 'dua', 'tiga']
