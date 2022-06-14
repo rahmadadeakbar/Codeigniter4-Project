@@ -35,6 +35,17 @@ $routes->get('/', 'Pages::index');
 $routes->get('/komik/edit/(:segment)', 'Komik::edit/$1');
 $routes->get('/komik/create', 'Komik::create');
 $routes->delete('/komik/(:num)', 'Komik::delete/$1');
+
+$routes->match(['get', 'post'], 'login', 'UserController::login', ["filter" => "noauth"]);
+// Admin routes
+$routes->group("admin", ["filter" => "auth"], function ($routes) {
+    $routes->get("/", "AdminController::index");
+});
+// Editor routes
+$routes->group("editor", ["filter" => "auth"], function ($routes) {
+    $routes->get("/", "EditorController::index");
+});
+$routes->get('logout', 'UserController::logout');
 // $routes->get('/komik/(:any)', 'Komik::detail/$1');
 
 // $$routes->get('/komik/(:segment)', 'Komik::detail/$1');
